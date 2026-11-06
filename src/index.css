@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Print styling */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 10pt;
+  }
+
+  /* Hide all UI elements during print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Show only the print container */
+  .print-only {
+    display: block !important;
+  }
+
+  /* 1 Card per sheet: A4 Landscape / Full */
+  .print-page-1-card {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+    padding: 8mm;
+    width: 297mm;
+    height: 204mm;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .print-page-1-card:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 2 Cards per sheet: A4 Portrait */
+  .print-page-2-portrait {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+    padding: 6mm 6mm;
+    width: 210mm;
+    height: 290mm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6mm;
+  }
+  .print-page-2-portrait:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 3 Cards per sheet: A4 Portrait */
+  .print-page-3-portrait {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+    padding: 4mm 4mm;
+    width: 210mm;
+    height: 290mm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3mm;
+  }
+  .print-page-3-portrait:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 4 Cards per sheet: A4 Landscape (2x2 Grid) */
+  .print-page-4-landscape {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+    padding: 3mm 4mm;
+    width: 297mm;
+    height: 204mm;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4mm;
+    align-content: stretch;
+  }
+  .print-page-4-landscape:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 6 Cards per sheet: A4 Landscape (3x2 Grid) */
+  .print-page-6-landscape {
+    page-break-after: always;
+    break-after: page;
+    margin: 0;
+    padding: 3mm 4mm;
+    width: 297mm;
+    height: 208mm;
+    max-height: 208mm;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 3mm;
+    align-content: stretch;
+    overflow: hidden;
+  }
+  .print-page-6-landscape:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 6 Cards per sheet: A4 Portrait (2x3 Grid - kartu bentuk landscape) */
+  .print-page-6-portrait {
+    page-break-after: always;
+    break-after: page;
+    margin: 0;
+    padding: 4mm 4mm;
+    width: 210mm;
+    height: 295mm;
+    max-height: 295mm;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 3mm;
+    align-content: stretch;
+    overflow: hidden;
+  }
+  .print-page-6-portrait:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .exam-card-print {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+  }
+
+  /* Force background colors and borders in print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none;
+  }
+}

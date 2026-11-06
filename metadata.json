@@ -1,0 +1,8 @@
+{
+  "name": "Cetak Kartu Ujian SMP Warga Surakarta",
+  "description": "Aplikasi manajemen peserta ujian, pengaturan jadwal, dan cetak kartu ujian massal PDF untuk SMP Warga Surakarta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
