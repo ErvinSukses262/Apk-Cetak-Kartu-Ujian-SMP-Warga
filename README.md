@@ -2,9 +2,9 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+Apk Cetak Kartu Ujian SMP Warga
 
-This contains everything you need to run your app locally.
+Aplikasi untuk membuat kartu ujian ASTS massal kelas 7A-9B, Lab Informatika SMP Warga Surakarta - @ Oktober 2026
 
 View your app in AI Studio: https://ai.studio/apps/845e7675-30b1-4ba3-a847-2936860a9ecf
 
